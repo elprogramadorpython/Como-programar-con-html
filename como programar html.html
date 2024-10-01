@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <center>
+        <h1>como programar html</h1>
+    </center>
+    <h3>para programar html necesitas un editor de codigo el cual puede ser <a href="https://code.visualstudio.com">Visual Estudio Code</a> (clic en lo rojo para descargarlo) este se utiliza tanto en la version de window 10 como en mac y linux. Despues de descargarlo e instalarlo ejecutelo. Habiendo echo esto instalaremos unas librerias las cuales son </h3> <h2>Cambio de idiomas:</h2> <h3>Spanish Lenguage Pack for Visua</h3> <h2>Resfrescado de pagina automatico:</h2> <h3>Live Server</h3>
+           <style>
+        #container {
+            margin: 0px auto;
+            width: 500px;
+            height: 375px;
+            border: 10px #333 solid;
+        }
+        #videoElement {
+            width: 500x;
+            height: 375px;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+
+        </video>
+    </div>
+</body>
+    
+    <script>
+    var video = document.querySelector("#videoElement");
+    if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({video: true, Audio: true})
+        .then(function (stream) {
+            video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+            console.log("something went wrong!");
+        });
+    }
+    </script>
+    <link rel="stylesheet" href="estilo.css">
+</html>
